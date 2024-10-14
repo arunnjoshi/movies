@@ -12,5 +12,6 @@ public class ApiEndpoints
         public const string GetALl = $"{Base}";
         public const string Get = $"{Base}/{{id:guid}}";
         public const string Update = $"{Base}/{{id:guid}}";
+        public const string Delete = $"{Base}/{{id:guid}}";
     }
 }

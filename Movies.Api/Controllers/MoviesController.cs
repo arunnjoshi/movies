@@ -78,5 +78,16 @@ namespace Movies.Api.Controllers
             });
         }
 
-    }
+		[HttpDelete(ApiEndpoints.Movies.Delete)]
+		public async Task<IActionResult> Delete([FromRoute] Guid id)
+		{
+			var res = await _movieRepository.DeleteByIdAsync(id);
+			if (!res)
+			{
+				return NotFound();
+			}
+			return Ok();
+		}
+
+	}
 }
