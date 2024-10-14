@@ -1,6 +1,0 @@
-@Movies.Contracts_HostAddress = http://localhost:5104
-
-GET {{Movies.Contracts_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
