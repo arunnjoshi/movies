@@ -8,3 +8,11 @@ services:
       - POSTGRES_USER=course
     ports:
       - "5432:5432"
+    container_name: db-container
+  API:
+    image: movies-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    container_name: movies-api-container
