@@ -8,7 +8,7 @@ COPY Movies.Api/Movies.Api.csproj ./Movies.Api/
 COPY Movies.Application/Movies.Application.csproj ./Movies.Application/
 COPY Movies.Contracts/Movies.Contracts.csproj ./Movies.Contracts/
 
-RUN dotnet restore ./movies.sln --verbosity detailed
+RUN dotnet restore ./movies.sln
 
 COPY . ./
 
