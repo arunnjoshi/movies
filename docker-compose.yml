@@ -16,3 +16,4 @@ services:
     depends_on:
       - db
     container_name: movies-api-container
+    build: ./
