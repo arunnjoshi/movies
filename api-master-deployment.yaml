@@ -8,8 +8,8 @@ spec:
     app: movies-api # Changed this to match the label in the Deployment
   ports:
     - protocol: TCP
-      port: 8080 # The port exposed externally
-      targetPort: 8080 # The port the container is listening on
+      port: 8080
+      targetPort: 8080
   type: LoadBalancer
 ---
 # Deployment
@@ -21,15 +21,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: movies-api # This must match the selector in the Service
+      app: movies-api
   template:
     metadata:
       labels:
-        app: movies-api # This must match the selector in the Service
+        app: movies-api
     spec:
       containers:
         - name: movies-api-container
-          image: arunnjoshi/movies-api:latest
+          image: arunnjoshi/movies-api
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # Ensure this is the correct port for your application
