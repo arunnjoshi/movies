@@ -5,7 +5,7 @@ metadata:
   name: api-service
 spec:
   selector:
-    app: movies-api # Changed this to match the label in the Deployment
+    app: movies-api
   ports:
     - protocol: TCP
       port: 8080
@@ -32,4 +32,4 @@ spec:
           image: arunnjoshi/movies-api
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080 # Ensure this is the correct port for your application
+            - containerPort: 8080 
